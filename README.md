@@ -8,3 +8,5 @@ https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Rec
 equations 3.49-3.51
 
 Licensed under 2-clause BSD license, https://opensource.org/license/bsd-2-clause/
+
+Code available at https://github.com/henriksson-lab/demo_bayesianlinmod
