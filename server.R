@@ -15,10 +15,6 @@ if(FALSE){
   runApp(".")
 }
 
-############ TODO: how many % of data points to include? or number?
-
-allowed_datafiles <- c("trivial.csv","diabetes.csv")
-
 
 ###
 # X is the data
