@@ -223,7 +223,7 @@ server <- function(input, output, session) {
       param_range <- c(-10,10)
       
       all_param_input[[paste("param",pname,"mean")]] <- sliderInput(
-        names_param_mean_called[i], label = paste(pname, ": Mean",sep=""),
+        names_param_mean_called[i], label = paste(pname, ": Prior Mean",sep=""),
         min = param_range[1], value = 0, max = param_range[2]
       )
       
@@ -239,7 +239,7 @@ server <- function(input, output, session) {
       }
       
       all_param_input[[paste("param",pname,"sd")]] <- sliderInput(
-        names_param_sd_called[i], label = paste(pname,": SD",sep=""),
+        names_param_sd_called[i], label = paste(pname,": Prior SD",sep=""),
         min = min_sd, value = cur_sd, max = max_sd
       )
     }
