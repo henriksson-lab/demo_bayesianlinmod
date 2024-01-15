@@ -1,6 +1,15 @@
+if(FALSE){
+  options(shiny.sanitize.errors = FALSE)
+  # logging level DEBUG
+  logging::basicConfig(level = 10)
+  # write logging output to the stderr file
+  logging::addHandler(logging::writeToFile, logger = '', file = stderr())
+}
+
+
 library(plotly)
-library(Cairo)
-options(shiny.usecairo=T)
+#library(Cairo)
+#options(shiny.usecairo=T)
 
 
 if(FALSE){
@@ -262,7 +271,9 @@ server <- function(input, output, session) {
   ##############################################################################
   
   output$plotFittedTable <- renderTable({
+print("here1")
     params <- getPriorPosterior()
+print("here2")
 
     data.frame(
       Parameter=params$param_names,
