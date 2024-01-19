@@ -19,10 +19,6 @@ reactive <- function(f) function() f
 ################################################################################
 
 
-if(FALSE){
-  
-}
-
 
 thedat <- read.csv("/corgi/websites/demo_linmod/data/diabetes.csv")
 
