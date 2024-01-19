@@ -160,7 +160,20 @@ ui <- fluidPage(
             value=1
           ),
           
-          uiOutput("priors")
+          
+          sliderInput(
+            inputId = "point_beta",
+            label = "inverse variance for points, beta:",
+            min=0,
+            max=2,
+            step = 0.01,
+            value=1
+          ),
+          
+          uiOutput("priors"),
+          
+          
+          
       )
 
     ),

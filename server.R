@@ -132,7 +132,7 @@ server <- function(input, output, session) {
    # print(thedat_PSI)
   #  print(thedat_t)
     
-    input_beta <- 1 ############################# Should be a slider separately
+    input_beta <- input$point_beta
     
     ##### Compute posterior
     prior_S <- sigma2_to_diagmatrix(prior_S_diag)
@@ -168,8 +168,6 @@ server <- function(input, output, session) {
       numparam=length(prior_S_diag)
     )
     
-#     print("===================== fitted equation ==============")
- #   print(thefit)
     
     thefit
   })
@@ -271,9 +269,7 @@ server <- function(input, output, session) {
   ##############################################################################
   
   output$plotFittedTable <- renderTable({
-print("here1")
     params <- getPriorPosterior()
-print("here2")
 
     data.frame(
       Parameter=params$param_names,
@@ -358,7 +354,7 @@ print("here2")
   
   
   
-  output$plotPosterior1D <- renderPlot({ #renderPlotly({
+  output$plotPosterior1D <- renderPlot({ 
 
     params <- getPriorPosterior()
 
